@@ -49,33 +49,47 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        .company-card h2 {
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid #e1e1e1;
+        }
+
+        .comparison-table th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: bold;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .comparison-table tr:first-child {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .check-mark {
             color: var(--secondary-color);
+            font-weight: bold;
         }
 
-        .services-list {
-            list-style: none;
-            margin: 1rem 0;
-        }
-
-        .services-list li {
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .services-list li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--secondary-color);
-        }
-
-        .competitors-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+        @media (max-width: 768px) {
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
         }
     </style>
 </head>
@@ -90,70 +104,74 @@
         <section class="company-card">
             <h2>Registrar Corp</h2>
             <p>A leader in FDA compliance services for over 20 years, providing comprehensive regulatory solutions for the food and beverage industry.</p>
-            
-            <h3>Key Services</h3>
-            <ul class="services-list">
-                <li>FDA Registration and U.S. Agent Services</li>
-                <li>Food and Beverage Compliance Consulting</li>
-                <li>ComplyHub™ FDA Compliance Software</li>
-                <li>FDA Detention Assistance</li>
-                <li>Labeling Compliance Services</li>
-                <li>Training and Education Programs</li>
-            </ul>
         </section>
 
-        <h2>Competitor Analysis</h2>
-        <div class="competitors-grid">
-            <div class="company-card">
-                <h3>FDAcg (FDA Compliance Group)</h3>
-                <p>Staffed by former FDA employees, providing expert consulting services</p>
-                <ul class="services-list">
-                    <li>Regulatory Compliance Consulting</li>
-                    <li>FDA Inspection Preparation</li>
-                    <li>Quality Systems Implementation</li>
-                </ul>
-            </div>
-
-            <div class="company-card">
-                <h3>Freyr Solutions</h3>
-                <p>Global regulatory affairs and compliance consulting firm</p>
-                <ul class="services-list">
-                    <li>Global Regulatory Services</li>
-                    <li>Publishing & Submissions</li>
-                    <li>Regulatory Software Solutions</li>
-                </ul>
-            </div>
-
-            <div class="company-card">
-                <h3>EAS Consulting Group</h3>
-                <p>Specializing in FDA regulatory matters and compliance</p>
-                <ul class="services-list">
-                    <li>Regulatory Consulting</li>
-                    <li>Auditing Services</li>
-                    <li>Label Compliance Review</li>
-                </ul>
-            </div>
-
-            <div class="company-card">
-                <h3>MDI Consultants</h3>
-                <p>FDA compliance and registration services provider</p>
-                <ul class="services-list">
-                    <li>Registration Services</li>
-                    <li>Compliance Training</li>
-                    <li>Quality System Development</li>
-                </ul>
-            </div>
-
-            <div class="company-card">
-                <h3>ANGLE Food Safety Consultants</h3>
-                <p>Specialized food safety consulting services</p>
-                <ul class="services-list">
-                    <li>FSMA Compliance</li>
-                    <li>HACCP Implementation</li>
-                    <li>Food Safety Training</li>
-                </ul>
-            </div>
-        </div>
+        <h2>Competitive Analysis Matrix</h2>
+        <table class="comparison-table">
+            <tr>
+                <th>Company</th>
+                <th>FDA Registration & U.S. Agent</th>
+                <th>Compliance Consulting</th>
+                <th>Software Solutions</th>
+                <th>Detention Assistance</th>
+                <th>Labeling Services</th>
+                <th>Training & Education</th>
+            </tr>
+            <tr>
+                <td><strong>Registrar Corp</strong></td>
+                <td class="check-mark">✓</td>
+                <td class="check-mark">✓</td>
+                <td class="check-mark">✓ (ComplyHub™)</td>
+                <td class="check-mark">✓</td>
+                <td class="check-mark">✓</td>
+                <td class="check-mark">✓</td>
+            </tr>
+            <tr>
+                <td>FDAcg</td>
+                <td>-</td>
+                <td class="check-mark">✓</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Freyr Solutions</td>
+                <td class="check-mark">✓</td>
+                <td class="check-mark">✓</td>
+                <td class="check-mark">✓</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>EAS Consulting</td>
+                <td>-</td>
+                <td class="check-mark">✓</td>
+                <td>-</td>
+                <td>-</td>
+                <td class="check-mark">✓</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>MDI Consultants</td>
+                <td class="check-mark">✓</td>
+                <td class="check-mark">✓</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td class="check-mark">✓</td>
+            </tr>
+            <tr>
+                <td>ANGLE Food Safety</td>
+                <td>-</td>
+                <td class="check-mark">✓</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td class="check-mark">✓</td>
+            </tr>
+        </table>
     </main>
 </body>
 </html>
