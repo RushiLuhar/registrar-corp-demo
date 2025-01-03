@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FDA Compliance Services - Competitive Analysis</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--primary-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 1rem;
+        }
+
+        .company-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .company-card h2 {
+            color: var(--secondary-color);
+        }
+
+        .services-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .services-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .services-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+
+        .competitors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>FDA Compliance Services Market Analysis</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="company-card">
+            <h2>Registrar Corp</h2>
+            <p>A leader in FDA compliance services for over 20 years, providing comprehensive regulatory solutions for the food and beverage industry.</p>
+            
+            <h3>Key Services</h3>
+            <ul class="services-list">
+                <li>FDA Registration and U.S. Agent Services</li>
+                <li>Food and Beverage Compliance Consulting</li>
+                <li>ComplyHub™ FDA Compliance Software</li>
+                <li>FDA Detention Assistance</li>
+                <li>Labeling Compliance Services</li>
+                <li>Training and Education Programs</li>
+            </ul>
+        </section>
+
+        <h2>Competitor Analysis</h2>
+        <div class="competitors-grid">
+            <div class="company-card">
+                <h3>FDAcg (FDA Compliance Group)</h3>
+                <p>Staffed by former FDA employees, providing expert consulting services</p>
+                <ul class="services-list">
+                    <li>Regulatory Compliance Consulting</li>
+                    <li>FDA Inspection Preparation</li>
+                    <li>Quality Systems Implementation</li>
+                </ul>
+            </div>
+
+            <div class="company-card">
+                <h3>Freyr Solutions</h3>
+                <p>Global regulatory affairs and compliance consulting firm</p>
+                <ul class="services-list">
+                    <li>Global Regulatory Services</li>
+                    <li>Publishing & Submissions</li>
+                    <li>Regulatory Software Solutions</li>
+                </ul>
+            </div>
+
+            <div class="company-card">
+                <h3>EAS Consulting Group</h3>
+                <p>Specializing in FDA regulatory matters and compliance</p>
+                <ul class="services-list">
+                    <li>Regulatory Consulting</li>
+                    <li>Auditing Services</li>
+                    <li>Label Compliance Review</li>
+                </ul>
+            </div>
+
+            <div class="company-card">
+                <h3>MDI Consultants</h3>
+                <p>FDA compliance and registration services provider</p>
+                <ul class="services-list">
+                    <li>Registration Services</li>
+                    <li>Compliance Training</li>
+                    <li>Quality System Development</li>
+                </ul>
+            </div>
+
+            <div class="company-card">
+                <h3>ANGLE Food Safety Consultants</h3>
+                <p>Specialized food safety consulting services</p>
+                <ul class="services-list">
+                    <li>FSMA Compliance</li>
+                    <li>HACCP Implementation</li>
+                    <li>Food Safety Training</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
